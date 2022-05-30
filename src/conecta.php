@@ -24,6 +24,7 @@ try {
 $conexao->setAttribute (
     PDO::ATTR_ERRMODE, // Constante de erros em geral
     PDO::ERRMODE_EXCEPTION // Constante de exceções de erro
+);    
 
 } catch (Exception $erro) {
     die("Erro: " .$erro->getMessage());
