@@ -80,4 +80,21 @@ function lerUmAluno(PDO $conexao, int $id):array {
 
   return $resultado;
 };
+
+
+
+function excluirAluno(PDO $conexao, int $id):void {
+ 
+    $sql = "DELETE FROM produtos WHERE id = :id";
+
+    try {
+      $consulta = $conexao->prepare($sql);
+
+      $consulta->bindParam(':id', $id, PDO::PARAM_INT);
+
+      $consulta->execute();
+    } catch (Exception $erro) {
+        die ("Erro: ". $erro->getMessage());
+    };
+};
 ?>

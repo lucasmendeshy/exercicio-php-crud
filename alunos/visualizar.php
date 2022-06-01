@@ -41,14 +41,15 @@ as páginas de atualização e exclusão. -->
    <div class="alunos">
 
     <article>
-        <p>Nome: <?=$aluno['nome']?> </p>
+        <h3><b>Nome:</b> <?=$aluno['nome']?> </h3>
         <p>Primeira: <?=$aluno['primeira']?> </p>
         <p>Segunda: <?=$aluno['segunda']?> </p>
         <p>Média:  <?=$aluno['media']?> </p>
         <p>Situação: <?=$aluno['situacao']?> </p>
 
-        <a href="atualizar.php?id=<?=$aluno['id']?>">Atualizar</a> 
-        <a class="excluir" href="excluir.php?id=<?=$aluno['id']?>"> </a>
+        <button a href="atualizar.php?id=<?=$aluno['id']?>">Atualizar</a></button> 
+
+        <button a class="excluir" href="excluir.php?id=<?=$aluno['id']?>">Excluir </a> </button>
 
     </article>
     </div>
