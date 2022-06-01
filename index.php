@@ -8,12 +8,12 @@
 </head>
 <body>
 <div class="container">
-    <h1>Exercíciogregergergre- CRUD com PHP e MySQL</h1>
+    <h1>Exercício- CRUD com PHP e MySQL</h1>
     <hr>
     <h2>Gerenciamento de alunos, notas, médias e aprovação/reprovação</h2>
     <hr>
     <ul>
-        <li><a href="visualizar.php">Visualizar Alunos</a></li>
+        <li><a href="alunos/visualizar.php">Visualizar Alunos</a></li>
         <li><a href="alunos/inserir.php">Inserir novo aluno</a></li>
     </ul>
 </div>

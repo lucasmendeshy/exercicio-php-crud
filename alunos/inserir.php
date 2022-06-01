@@ -1,26 +1,26 @@
 <?php
-
-
-if(isset($_POST['inserir']) ) {
+if(isset($_POST['enviar']) ) {
 	 require_once "../src/funcoes-alunos.php";
 
 	 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 	 $primeira = filter_input(INPUT_POST, 'primeira', FILTER_SANITIZE_NUMBER_FLOAT,FILTER_FLAG_ALLOW_FRACTION);
 	 $segunda = filter_input(INPUT_POST, 'segunda', FILTER_SANITIZE_NUMBER_FLOAT,FILTER_FLAG_ALLOW_FRACTION);
-	 $media = filter_input(INPUT_POST, 'media', FILTER_SANITIZE_NUMBER_FLOAT,FILTER_FLAG_ALLOW_FRACTION);
-	 $situacao = filter_input(INPUT_POST, 'situacao', FILTER_SANITIZE_SPECIAL_CHARS);
 
 	 $media = ($primeira + $segunda) /2;
 
-	 //inserirAlunos($conexao, $nome);
+	 if ($primeira >= 7) {
+        $situacao = "Aprovado"; 
+	 } else  {
+		 $situacao = "Reprovado";
+	 };
+	   
 
-	 //header("location:visualizar.php");
+	 inserirAlunos($conexao, $nome, $primeira, $segunda, $media, $situacao);
+
+	 header("location:visualizar.php");
 };
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -47,11 +47,11 @@ if(isset($_POST['inserir']) ) {
 	<p> <label for="segunda">Segunda nota:</label>
 	    <input type="number" name="segunda" id="segunda" step="0.1" min="0.0" max="10" required></p>
 	    
-      <button>Cadastrar aluno</button>
+      <button name="enviar">Cadastrar aluno</button>
 	</form>
     <hr>
 
-    <p><a href="index.php">Voltar ao início</a></p>
+    <p><a href="../index.php">Voltar ao início</a></p>
 	<p><a href="../index.php">Home</a></p>
 </div>
 </body>

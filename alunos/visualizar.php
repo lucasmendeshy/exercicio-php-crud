@@ -1,3 +1,10 @@
+<?php
+require_once "../src/funcoes-alunos.php";
+
+$listaDeAlunos = lerAlunos($conexao);
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,46 +17,46 @@
 <div class="container">
     <h1>Lista de alunos</h1>
     <hr>
-    <p><a href="inserir.php">Inserir novo aluno</a></p>
+    <p><a href="inserir.php">Home</a></p>
    <!-- Aqui você deverá criar o HTML que quiser e o PHP necessários
 para exibir a relação de alunos existentes no banco de dados.
 Obs.: não se esqueça de criar também os links dinâmicos para
 as páginas de atualização e exclusão. -->
 
 
-<table>
-    <caption style="color: red;">Lista de Alunos</caption>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th colspan="2">Operações</th>
-    </tr>
+    <!-- <div class="alunos">
 
+    <article>
+        <p>Nome:</p>
+        <p>Primeira:</p>
+        <p>Segunda:</p>
+        <p>Média:</p>
+        <p>Situação:</p>
+    </article>
 
+    </div> -->
+    
+    <?php foreach($listaDeAlunos as $aluno) {?>
+ 
+   <div class="alunos">
 
-    </thead>
-    <tbody>
+    <article>
+        <p>Nome: <?=$aluno['nome']?> </p>
+        <p>Primeira: <?=$aluno['primeira']?> </p>
+        <p>Segunda: <?=$aluno['segunda']?> </p>
+        <p>Média:  <?=$aluno['media']?> </p>
+        <p>Situação: <?=$aluno['situacao']?> </p>
 
-    <?php
-    foreach($listaDeAlunos as $aluno) {?>
+        <a href="atualizar.php?id=<?=$aluno['id']?>">Atualizar</a> 
+        <a class="excluir" href="excluir.php?id=<?=$aluno['id']?>"> </a>
 
-         <tr>
-             <td> <?=$aluno['id']?> </td>
-             <td> <?=$aluno['nome']?> </td>
-             <td> <a href="atualizar.php?id=<?=$aluno['id']?>">Atualizar </a>  </td>
-             <td> <a class="excluir" href="excluir.php?id=<?=$aluno['id']?>"> </a>  </td>
-         </tr>
+    </article>
+    </div>
 
         <?php
           }
-          ?>
-
- </tbody>
-</table>
-
-
-    <p><a href="index.php">Voltar ao início</a></p>
+        ?>
+    <p><a href="../index.php">Voltar ao início</a></p>
 </div>
 </body>
 </html>
