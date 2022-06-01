@@ -14,7 +14,7 @@
     <hr>
     <ul>
         <li><a href="visualizar.php">Visualizar Alunos</a></li>
-        <li><a href="inserir.php">Inserir novo aluno</a></li>
+        <li><a href="alunos/inserir.php">Inserir novo aluno</a></li>
     </ul>
 </div>
 </body>
