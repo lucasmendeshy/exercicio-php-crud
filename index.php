@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Exercício - CRUD com PHP e MySQL</h1>
+    <h1>Exercíciogregergergre- CRUD com PHP e MySQL</h1>
     <hr>
     <h2>Gerenciamento de alunos, notas, médias e aprovação/reprovação</h2>
     <hr>
