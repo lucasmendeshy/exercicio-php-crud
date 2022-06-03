@@ -85,7 +85,7 @@ function lerUmAluno(PDO $conexao, int $id):array {
 
 function excluirAluno(PDO $conexao, int $id):void {
  
-    $sql = "DELETE FROM produtos WHERE id = :id";
+    $sql = "DELETE FROM alunos WHERE id = :id";
 
     try {
       $consulta = $conexao->prepare($sql);

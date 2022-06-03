@@ -35,7 +35,7 @@ if(isset($_POST['enviar']) ) {
 	<h1>Cadastrar um novo aluno </h1>
     <hr>
     		
-    <p>Utilize o formulário abaixo para cadastrar um novo aluno.</p>
+    <h2>Utilize o formulário abaixo para cadastrar um novo aluno.</h2>
 	<form action="#" method="post">
 
     <p> <label for="nome">Nome:</label>

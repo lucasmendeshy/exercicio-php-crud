@@ -2,6 +2,7 @@
 require_once "../src/funcoes-alunos.php";
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+
 $aluno = lerUmAluno($conexao, $id);
 
 if(isset($_POST['atualizar']) ) {
@@ -17,15 +18,11 @@ if(isset($_POST['atualizar']) ) {
         $situacao = "Reprovado";
     }
    
-
-
     atualizarAluno($conexao, $id, $nome, $primeira, $segunda, $media, $situacao);
 
     header("location:visualizar.php");
 };
 ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -67,7 +64,7 @@ if(isset($_POST['atualizar']) ) {
 	</form>    
     
     <hr>
-    <p><a href="atualizar.php">Voltar à lista de alunos</a></p>
+    <p><a href="visualizar.php">Voltar à lista de alunos</a></p>
 </div>
 </body>
 </html>

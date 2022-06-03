@@ -30,5 +30,5 @@ $conexao->setAttribute (
     die("Erro: " .$erro->getMessage());
 }
 
-var_dump($conexao); //teste
+/*var_dump($conexao); */
 ?>
