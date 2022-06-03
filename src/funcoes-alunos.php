@@ -97,4 +97,5 @@ function excluirAluno(PDO $conexao, int $id):void {
         die ("Erro: ". $erro->getMessage());
     };
 };
+
 ?>

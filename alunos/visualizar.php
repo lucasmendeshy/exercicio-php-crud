@@ -76,9 +76,6 @@ body {
      position: relative;
      width: 80px;
      margin-bottom: 10px;
-
-
-
 }
 
 .excluir  {
@@ -136,6 +133,7 @@ body {
 
 .container h1 {
     text-align: center;
+    
 }
 </style>
 
@@ -168,11 +166,18 @@ as páginas de atualização e exclusão. -->
    <div class="alunos">
 
     <article>
+
+    
         <h3><b>Nome:</b> <?=$aluno['nome']?> </h3>
         <p>Primeira: <?=$aluno['primeira']?> </p>
         <p>Segunda: <?=$aluno['segunda']?> </p>
         <p>Média:  <?=$aluno['media']?> </p>
-        <p>Situação: <?=$aluno['situacao']?> </p>
+
+        <?php if($aluno['media']<=7) { ?> <p style="background-color: red; color: white;">Situação: <?=$aluno['situacao']?> </p> 
+
+            <?php } else { ?>
+                <p style="background-color: green; color: white;">Situação: <?=$aluno['situacao']?> </p> 
+                <?php } ?>
 
         <a class="atualizar" href="atualizar.php?id=<?=$aluno['id']?>">Atualizar</a> 
 
@@ -204,5 +209,6 @@ as páginas de atualização e exclusão. -->
     }
 </script>
 
+<p class=" <?= ( $aluno ['media'] >= 7 ) ? 'style:background-color: green;' : 'style: background-color: red;';?>"> </p>
 </body>
 </html>

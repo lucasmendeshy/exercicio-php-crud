@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Exercício CRUD com PHP e MySQL</title>
 <link href="css/style.css" rel="stylesheet">
+
+<style>
+    body{
+		background-color: #f3f3f3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin: 10px;
+	}
+	.container h1{
+		text-align: center;
+	}
+</style>
+
 </head>
 <body>
 <div class="container">

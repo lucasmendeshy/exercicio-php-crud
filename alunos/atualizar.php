@@ -30,6 +30,8 @@ if(isset($_POST['atualizar']) ) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Atualizar dados - Exercício CRUD com PHP e MySQL</title>
 <link href="css/style.css" rel="stylesheet">
+
+
 </head>
 <body>
 <div class="container">
@@ -38,6 +40,7 @@ if(isset($_POST['atualizar']) ) {
     		
     <p>Utilize o formulário abaixo para atualizar os dados do aluno.</p>
     <form action="#" method="post">
+        
         
 	    <p><label for="nome">Nome:</label>
 	    <input value="<?=$aluno['nome']?>" type="text" name="nome" id="nome" required></p>
