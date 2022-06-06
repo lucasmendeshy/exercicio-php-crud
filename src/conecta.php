@@ -4,9 +4,9 @@
 
 /* Parâmetros */ 
 $servidor = "localhost";
-$usuario = "webmaio1_mendes";
-$senha = "Luc@s4674";
-$banco = "webmaio1_mendeslucas";
+$usuario = "root";
+$senha = "";
+$banco = "crud_escola-lucas";
 
 
 try {
